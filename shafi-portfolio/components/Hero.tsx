@@ -5,56 +5,99 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="wrap">
-        <div className="hero-left">
-          <span className="hero-avail">
-            <span className="status-dot" /> Calicut, Kerala IN — open to full-stack roles
-          </span>
-          <h1 className="hero-name">
-            Muhammed
-            <br />
-            Shafi <span className="accent">KT.</span>
-          </h1>
-          <p className="hero-role">
-            {profile.role}
-          </p>
-          <p className="hero-desc">
-            MERN-stack developer working across React, Node.js, and MongoDB, with a habit
-            of reaching for job queues, real-time updates, and background workers when a
-            UI alone isn&apos;t enough. Currently a Full Stack Developer Intern at Bridgeon
-            Solutions.
-          </p>
-          <div className="hero-ctas">
-            <a href="#work" className="btn btn-primary">
-              View Projects →
-            </a>
-            <a href="#contact" className="btn btn-ghost">
-              Contact Me
-            </a>
-          </div>
-          <div className="hero-links">
-            <a href={profile.github} target="_blank" rel="noopener noreferrer">
-              GitHub ↗
-            </a>
-            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
-              LinkedIn ↗
-            </a>
-            <a href={profile.resumePath} target="_blank" rel="noopener noreferrer">
-              Resume ↗
-            </a>
-          </div>
-        </div>
-        <div className="hero-right">
-          <div className="portrait-frame">
-            <div className="corner tl" />
-            <div className="corner br" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={profile.portraitPath} alt="Portrait of Muhammed Shafi KT" />
-            <div className="portrait-tag">
-              <b>Muhammed Shafi KT</b>
-              <span>full-stack engineer / MERN</span>
+        <div className="hero-grid">
+          <div className="hero-left">
+            <div className="hero-avail">
+              <span className="status-dot" />
+              <span>{profile.location} · Open to Full Stack / MERN Roles</span>
+            </div>
+
+            <h1 className="hero-title">
+              <span className="name-gradient">Muhammed</span>
+              <br />
+              <span className="name-gradient">Shafi</span>
+              <span className="accent-dot"> KT.</span>
+            </h1>
+
+            <p className="hero-role-lead">
+              <b>{profile.title}</b> — Architecting scalable full-stack web applications, resilient backend microservices, and production AI pipelines.
+            </p>
+
+            <p className="hero-bio">
+              1 year of hands-on experience engineering production systems with <b>React.js, Next.js, Node.js, Express.js, MongoDB, and TypeScript</b>. Experienced in Docker containerization, Redis job queues, and AWS cloud hosting, with deep focus on AI capabilities including <b>RAG pipelines, vector embeddings, pgvector, and LLM integrations</b>. Currently a Full Stack Developer Intern at <b>Bridgeon Solutions</b>.
+            </p>
+
+            <div className="hero-hud">
+              <div className="hud-pill">
+                <span className="hud-val">1 Year</span>
+                <span className="hud-lbl">Hands-on Experience</span>
+              </div>
+              <div className="hud-pill">
+                <span className="hud-val">4 Systems</span>
+                <span className="hud-lbl">Featured Products</span>
+              </div>
+              <div className="hud-pill">
+                <span className="hud-val">MERN + Py</span>
+                <span className="hud-lbl">Core Engineering</span>
+              </div>
+              <div className="hud-pill">
+                <span className="hud-val">RAG / Vectors</span>
+                <span className="hud-lbl">AI Architecture</span>
+              </div>
+            </div>
+
+            <div className="hero-ctas">
+              <a href="#work" className="btn btn-primary">
+                Explore Projects →
+              </a>
+              <a
+                href={profile.resumePath}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+              >
+                Download CV (PDF) ↗
+              </a>
+              <a href="#contact" className="btn btn-ghost">
+                Initialize Contact
+              </a>
+            </div>
+
+            <div className="hero-socials">
+              <a href={profile.github} target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+              </a>
+              <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+                LinkedIn ↗
+              </a>
+              <a href={`mailto:${profile.email}`}>
+                {profile.email}
+              </a>
             </div>
           </div>
-          <Terminal />
+
+          <div className="hero-right">
+            <div className="portrait-container">
+              <div className="corner-bracket tl" />
+              <div className="corner-bracket tr" />
+              <div className="corner-bracket bl" />
+              <div className="corner-bracket br" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={profile.portraitPath}
+                alt="Muhammed Shafi KT - Full Stack Developer"
+                width={480}
+                height={580}
+              />
+              <div className="portrait-overlay" />
+              <div className="portrait-meta">
+                <span className="portrait-name">Muhammed Shafi KT</span>
+                <span className="portrait-role">Full Stack Developer (MERN) · Bridgeon Solutions</span>
+              </div>
+            </div>
+
+            <Terminal />
+          </div>
         </div>
       </div>
     </section>

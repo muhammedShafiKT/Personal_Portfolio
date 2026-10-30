@@ -13,10 +13,10 @@ export default function Projects() {
     <section className="section" id="work">
       <div className="wrap">
         <Reveal className="section-head">
-          <span className="eyebrow">03 — Work</span>
-          <h2 className="section-title">Featured projects.</h2>
+          <span className="eyebrow">03 — Featured Work</span>
+          <h2 className="section-title">Production systems &amp; AI architectures.</h2>
           <p className="section-sub">
-            Two products, built solo, end to end — architecture, backend systems, and UI.
+            A curated showcase of end-to-end full-stack applications, distributed background job processing, microservices, and retrieval-augmented generation pipelines.
           </p>
         </Reveal>
 

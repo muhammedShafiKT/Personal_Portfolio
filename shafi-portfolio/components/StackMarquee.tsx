@@ -8,13 +8,13 @@ export default function StackMarquee() {
   const items = [...stackMarquee, ...stackMarquee];
 
   return (
-    <div className="stack-strip">
+    <div className="marquee-section" aria-label="Core Technical Stack Overview">
       <div
-        className="stack-track"
+        className="marquee-track"
         style={reducedMotion ? { animation: "none" } : undefined}
       >
         {items.map((item, i) => (
-          <span className="stack-item" key={i}>
+          <span className="marquee-item" key={i}>
             {item}
           </span>
         ))}

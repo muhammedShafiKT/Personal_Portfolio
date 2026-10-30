@@ -6,37 +6,36 @@ export default function About() {
     <section className="section" id="about">
       <div className="wrap">
         <Reveal className="section-head">
-          <span className="eyebrow">01 — About</span>
-          <h2 className="section-title">Systems-minded, product-focused.</h2>
+          <span className="eyebrow">01 — Professional Profile</span>
+          <h2 className="section-title">Engineered for scale, driven by data &amp; AI.</h2>
+          <p className="section-sub">
+            Full Stack Developer (MERN) bridging high-precision frontend interfaces with resilient backend architecture, distributed queues, and production vector search.
+          </p>
         </Reveal>
+
         <div className="about-grid">
           <Reveal className="about-text">
             <p>
-              I&apos;m a full-stack developer based in Kerala, working across the MERN
-              stack — <b>React and Redux Toolkit</b> on the frontend, <b>Node.js and
-              Express</b> on the backend, with <b>MongoDB, Redis, and DuckDB</b> handling
-              data along the way.
+              I am a Full Stack Developer based in <b>Calicut, Kerala, India</b>, with <b>1 year of hands-on experience</b> building scalable web applications across the entire MERN spectrum — <b>React.js, Next.js, Redux Toolkit, Node.js, Express.js, MongoDB, and TypeScript</b>.
             </p>
             <p>
-              What I enjoy most is the part most portfolios skip: the plumbing behind the
-              UI. Background job queues that don&apos;t block a request, real-time updates
-              over sockets, a pipeline that ingests a messy CSV and turns it into a
-              dashboard. <b>InsightFlow</b> and <b>Luxora</b> — the two projects on this
-              page — are both built that way, end to end, by me alone.
+              My backend engineering prioritizes throughput and system reliability: architecting secure <b>REST APIs</b>, configuring <b>JWT (httpOnly cookies) &amp; Google OAuth</b> with granular role-based access control, managing distributed job queues with <b>Redis and BullMQ</b>, streaming live status updates over <b>Socket.IO</b>, and building multi-stage containerized deployments with <b>Docker on AWS EC2 &amp; S3</b>.
             </p>
             <p>
-              Right now I&apos;m interning as a <b>Full Stack Developer at Bridgeon
-              Solutions</b>, shipping features in production, while finishing my BCA at
-              Sree Narayana Guru Open University.
+              In addition to core full-stack systems, I actively engineer <b>AI capabilities</b>: constructing end-to-end document-to-RAG pipelines with <b>PostgreSQL and pgvector</b>, deploying <b>Python FastAPI</b> microservices for high-throughput embedding calculations, and orchestrating <b>LLM integrations with OpenAI SDK and Google Gemini</b> alongside high-speed columnar data analytics with <b>DuckDB</b>.
+            </p>
+            <p>
+              Currently, I am shipping features as a <b>Full Stack Developer Intern at Bridgeon Solutions</b> while completing my <b>Bachelor of Computer Applications (BCA)</b> at Sree Narayana Guru Open University (SGOU).
             </p>
           </Reveal>
-          <Reveal className="facts">
+
+          <Reveal className="facts-card">
             {facts.map((f) => (
-              <div className="fact" key={f.k}>
-                <span className="fact-k">{f.k}</span>
+              <div className="fact-row" key={f.k}>
+                <span className="fact-label">{f.k}</span>
                 <span
-                  className="fact-v"
-                  style={f.accent ? { color: "var(--ok)" } : undefined}
+                  className="fact-val"
+                  style={f.accent ? { color: "var(--accent-emerald)", fontWeight: 700 } : undefined}
                 >
                   {f.v}
                 </span>
